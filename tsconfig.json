@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ES2017",
+    "lib": [
+      "ES2019"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": [
+        "projects/shared/*"
+      ]
+    },
+    // "declaration": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipDefaultLibCheck": true,
+    "pretty": true,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "projects/**/*.ts",
+    "projects/**/*.tsx",
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/*.test.ts"
+  ]
+}

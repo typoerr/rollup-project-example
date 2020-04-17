@@ -1,0 +1,1 @@
+TypeScriptのProject Referencesを使わずともRollupで事足りた

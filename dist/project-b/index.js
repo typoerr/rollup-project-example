@@ -1,0 +1,36 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var http = _interopDefault(require('http'));
+
+function constant(val) {
+    return (..._) => val;
+}
+
+function identity(a, ..._rest) {
+    return a;
+}
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+function run() {
+    const server = http.createServer((req, res) => {
+        console.log(identity(constant('project-b')()));
+        res.end(req.url);
+    });
+    server.listen(3000);
+}
+
+exports.run = run;
+//# sourceMappingURL=index.js.map

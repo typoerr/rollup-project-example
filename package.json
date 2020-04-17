@@ -1,0 +1,47 @@
+{
+  "name": "@typoerr/template-sandbox",
+  "description": "",
+  "version": "0.0.1",
+  "author": "typoerr",
+  "license": "MIT",
+  "homepage": "https://github.com/typoerr/template-sandbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typoerr/template-sandbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typoerr/template-sandbox/issues"
+  },
+  "dependencies": {
+    "@typoerr/atomic": "^0.0.20"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.1",
+    "@typoerr/eslint-config": "^0.0.28",
+    "eslint": "^6.8.0",
+    "gulp": "^4.0.2",
+    "jest": "^25.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.6.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "compile:rollup": "rollup -c rollup.config.js",
+    "compile:gulp": "gulp build",
+    "compile:gulp:watch": "gulp watch",
+    "clean": "run-p clean:**",
+    "clean:dist": "rimraf dist",
+    "lint": "eslint src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "test": "jest"
+  }
+}
